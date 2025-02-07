@@ -82,9 +82,9 @@ if st.button("Predict"):
                      columns=clf.feature_names_in_)
     
     # 仅替换布尔型数据
-    X[bool_columns] = X[bool_columns].replace({"Yes": 0, "No": 1})
+    X[bool_columns] = X[bool_columns].replace({"Yes": 1, "No": 0})
     X[bool_columns] = X[bool_columns].replace({"≥50": 1, "18-49": 0})
-    X[bool_columns] = X[bool_columns].replace({"celioscope": 0, "laparotomy": 1})
+    X[bool_columns] = X[bool_columns].replace({"celioscope": 1, "laparotomy": 0})
     X[bool_columns] = X[bool_columns].replace({"neuraxial anesthesia": 1, "general anesthesia": 0})
     X["PQ"] = X["PQ"].replace({"0": 0, "1": 1, "2": 2, "3": 3})
     
