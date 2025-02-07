@@ -3,5 +3,6 @@ joblib
 shap
 matplotlib
 numpy
+xgboost
 streamlit-shap
 streamlit
